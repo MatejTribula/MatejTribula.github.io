@@ -2,16 +2,149 @@
 <html lang="en">
 
 <head>
-  <title>Jan Mrkva</title>
+  <title>Matej Tribula</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
+  <header class="hero">
+    <div class="profile-pic"></div>
+    <div class="name">
+      <h1>Matej Tribula</h1>
+      <small>Student</small>
+    </div>
+  </header>
 
+
+  <div class="grid-container">
+    <section class="about">
+      <i class="fa fa-question"></i>
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur excepturi in ipsam, eligendi
+        voluptas minima similique vero tenetur, iusto illo libero numquam quisquam esse delectus enim blanditiis
+        perspiciatis at?
+        At cupiditate enim provident quasi aliquid perferendis explicabo aut hic fugiat iure, a ex voluptates harum
+        nisi, sit ducimus laudantium ut eveniet excepturi veniam ratione repellat quod aspernatur nobis. Nemo!</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-group">
+        <i class="fa-solid fa-envelope"></i>
+        <p>matej.tribula@gmail.com</p>
+      </div>
+
+      <div class="contact-group">
+        <i class="fa-solid fa-mobile"></i>
+        <p>+421 902 286 495</p>
+      </div>
+
+      <div class="contact-group">
+        <i class="fa-brands fa-twitter"></i>
+        <p>@mattveym</p>
+      </div>
+
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="experiences">
+        <div class="knowledge html">
+          <h3>HTML</h3>
+          <div class="knowledge-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
+              ad
+              esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
+              natus!</p>
+            <img src="images/html.svg" alt="HTML logo">
+          </div>
+        </div>
+
+        <div class="knowledge css">
+          <h3>CSS</h3>
+          <div class="knowledge-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
+              ad
+              esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
+              natus!</p>
+            <img src="images/css.svg" alt="HTML logo">
+          </div>
+        </div>
+
+        <div class="knowledge bootstrap">
+          <h3>Bootstrap</h3>
+          <div class="knowledge-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
+              ad
+              esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
+              natus!</p>
+            <img src="images/bootstrap.svg" alt="HTML logo">
+          </div>
+        </div>
+
+        <div class="knowledge js">
+          <h3>javascript</h3>
+          <div class="knowledge-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
+              ad
+              esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
+              natus!</p>
+            <img src="images/js.svg" alt="HTML logo">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="education-group">
+        <h3>Secondary School</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, accusantium non corrupti consequatur,
+          minus molestiae provident magni eveniet doloribus vel unde facere! Labore, quam culpa! Recusandae vitae odio
+          perferendis impedit?</p>
+      </div>
+
+      <div class="education-group">
+        <h3>Self Taught</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, accusantium non corrupti consequatur,
+          minus molestiae provident magni eveniet doloribus vel unde facere! Labore, quam culpa! Recusandae vitae odio
+          perferendis impedit?</p>
+      </div>
+
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skill"></div>
+
+    </section>
+
+    <section class="interests">
+      <h2>Interests</h2>
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae quibusdam, eos nemo omnis ex voluptas
+      debitis ducimus adipisci error ipsa iusto nobis! Quaerat, reprehenderit. Reprehenderit quidem impedit maxime
+      culpa.
+    </section>
+
+    <section class="form">
+      <form action="index.php" method="post"></form>
+    </section>
+  </div>
+
+  <footer><small>Copyright © 2023 Matej Tribula. All Rights Reserved</small></footer>
+
+
+
+
+
+
+  <!-- 
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
     <a class="navbar-brand" href="#">Clarence Taylor</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,7 +162,7 @@
           <a class="nav-link" href="#education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#knowledges">knowledges</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#interests">Interests</a>
@@ -45,7 +178,7 @@
 
     <section id="about">
       <div class="jumbotron">
-        <h1>Jan Mrkva</h1>
+        <h1>Matej Tribula</h1>
         <div class="subheading">
           3542 BERRY STREET · CHEYENNE WELLS, CO 80810 · (317) 585-8468 · NAME@EMAIL.COM
         </div>
@@ -120,8 +253,8 @@
       </p>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="knowledges">
+      <h2>knowledges</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat sapien ac facilisis efficitur. Integer faucibus
         eros congue arcu volutpat, et consequat lectus placerat. Donec pellentesque turpis sit amet elit rutrum tincidunt.
@@ -162,7 +295,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js"></script>  -->
 
 </body>
 

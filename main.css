@@ -1,7 +1,232 @@
-.subheading {
-  font-weight: 600;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+
+  --clr-primary: #000;
+  --clr-secondary: #000;
+  --clr-accent: #000;
+
+
+  --box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
 }
 
-.date {
-  min-width: 18rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: #e4e4e4;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+header {
+  /* background-color: pink; */
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  padding: 2rem;
+}
+
+.profile-pic {
+  background-color: yellowgreen;
+  width: 200px;
+  height: 200px;
+  border-radius: 30% 70% 64% 36% / 48% 41% 59% 52%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  margin-left: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.name>small {
+  font-size: 1.5rem;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "about contact"
+    "experience experience"
+    "education skills"
+    "education zdeno"
+    "form form" / 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+section {
+  background-color: #eeeeee;
+  box-shadow: var(--box-shadow);
+  /* width:; */
+}
+
+
+.grid-container>section {
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.grid-container>section>div {
+  margin-bottom: 1rem;
+}
+
+.grid-container>section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+
+.grid-container>section h3 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 18px;
+}
+
+.grid-container i {
+  font-size: 1.8rem;
+}
+
+.about {
+  grid-area: about;
+  position: realtive;
+}
+
+.about h2 {
+  z-index: 100;
+}
+
+.about>p {
+  z-index: 80;
+}
+
+.about>i {
+  position: absolute;
+  font-size: 12rem;
+  color: greenyellow;
+  /* opacity: ; */
+  z-index: 1;
+}
+
+
+.contact {
+  grid-area: contact;
+}
+
+.contact>.contact-group {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+
+.contact-group>i {
+  position: absolute;
+  transform: translateY(-14%);
+  font-size: 2rem;
+}
+
+.contact-group p {
+  margin-left: 3rem;
+}
+
+.experience {
+  grid-area: experience;
+}
+
+.experiences {
+  display: grid;
+  grid-template:
+    "html css"
+    "bootstrap js" / 1fr 1fr;
+  gap: 1rem;
+}
+
+.knowledge {
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.knowledge:hover {
+  background-color: beige;
+  box-shadow: var(--box-shadow);
+  transform: translateY(-5px);
+}
+
+.html {
+  grid-area: html;
+}
+
+.css {
+  grid-area: css;
+}
+
+.bootstrap {
+  grid-area: bootstrap;
+}
+
+
+
+.js {
+  grid-area: js;
+}
+
+
+.knowledge-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.knowledge-content img {
+  max-width: 100px;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.html img,
+.css img,
+.js img {
+  max-width: 80px;
+}
+
+.education {
+  grid-area: education;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.interests {
+  grid-area: zdeno;
+}
+
+.form {
+  grid-area: form;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
