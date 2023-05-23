@@ -11,89 +11,94 @@
 
 <body>
   <header class="hero">
-    <div class="profile-pic"></div>
+    <h1>Curriculum <br>vitae <span>of</span><img src="images/signature.svg" alt="signature"></h1>
+
+    <!-- <div class="profile-pic"></div>
     <div class="name">
       <h1>Matej Tribula</h1>
       <small>Student</small>
-    </div>
+    </div> -->
   </header>
 
 
   <div class="grid-container">
     <section class="about">
-      <i class="fa fa-question"></i>
-      <h2>About</h2>
+      <h2><i class="fa fa-question"></i>About</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur excepturi in ipsam, eligendi
         voluptas minima similique vero tenetur, iusto illo libero numquam quisquam esse delectus enim blanditiis
         perspiciatis at?
         At cupiditate enim provident quasi aliquid perferendis explicabo aut hic fugiat iure, a ex voluptates harum
         nisi, sit ducimus laudantium ut eveniet excepturi veniam ratione repellat quod aspernatur nobis. Nemo!</p>
+      <div class="btns about-buttons">
+        <button class="btn group-btn about-btn active">Background</button>
+        <button class="btn group-btn about-btn">School</button>
+        <button class="btn group-btn about-btn">Work</button>
+      </div>
     </section>
 
     <section class="contact">
-      <h2>Contact</h2>
+      <h2><i class="fa-regular fa-at"></i> Contact</h2>
+
 
       <div class="contact-group">
-        <i class="fa-solid fa-envelope"></i>
-        <p>matej.tribula@gmail.com</p>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-mobile"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
       </div>
 
-      <div class="contact-group">
-        <i class="fa-solid fa-mobile"></i>
-        <p>+421 902 286 495</p>
-      </div>
-
-      <div class="contact-group">
-        <i class="fa-brands fa-twitter"></i>
-        <p>@mattveym</p>
-      </div>
 
     </section>
 
     <section class="experience">
-      <h2>Experience</h2>
+
+      <h2><i class="fa-solid fa-terminal"></i> Experience</h2>
       <div class="experiences">
-        <div class="knowledge html">
+        <div class="technology html">
           <h3>HTML</h3>
-          <div class="knowledge-content">
+          <img src="images/html.svg" alt="HTML5 logo">
+          <div class="technology-content">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
               ad
               esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
               natus!</p>
-            <img src="images/html.svg" alt="HTML logo">
+
           </div>
         </div>
 
-        <div class="knowledge css">
+        <div class="technology css">
           <h3>CSS</h3>
-          <div class="knowledge-content">
+          <img src="images/css.svg" alt="CSS3 logo">
+          <div class="technology-content">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
               ad
               esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
               natus!</p>
-            <img src="images/css.svg" alt="HTML logo">
+
           </div>
         </div>
 
-        <div class="knowledge bootstrap">
+        <div class="technology bootstrap">
           <h3>Bootstrap</h3>
-          <div class="knowledge-content">
+          <img src="images/bootstrap.svg" alt="Bootstrap logo">
+          <div class="technology-content">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
               ad
               esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
               natus!</p>
-            <img src="images/bootstrap.svg" alt="HTML logo">
+
           </div>
         </div>
 
-        <div class="knowledge js">
+        <div class="technology js">
           <h3>javascript</h3>
-          <div class="knowledge-content">
+          <img src="images/js.svg" alt="javascript logo">
+          <div class="technology-content">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolorem non illum sint,
               ad
               esse harum minima quibusdam placeat repellendus expedita explicabo atque alias ut laboriosam rem voluptas
               natus!</p>
-            <img src="images/js.svg" alt="HTML logo">
+
           </div>
         </div>
       </div>
@@ -101,21 +106,27 @@
     </section>
 
     <section class="education">
-      <h2>Education</h2>
+
+      <h2><i class="fa-solid fa-lines-leaning"></i> Education</h2>
+
       <div class="education-group">
         <h3>Secondary School</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, accusantium non corrupti consequatur,
           minus molestiae provident magni eveniet doloribus vel unde facere! Labore, quam culpa! Recusandae vitae odio
           perferendis impedit?</p>
       </div>
-
       <div class="education-group">
-        <h3>Self Taught</h3>
+        <h3>Self taught</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, accusantium non corrupti consequatur,
           minus molestiae provident magni eveniet doloribus vel unde facere! Labore, quam culpa! Recusandae vitae odio
           perferendis impedit?</p>
       </div>
 
+      <div class="btns education-buttons">
+        <button class="btn group-btn education-btn active">All</button>
+        <button class="btn group-btn education-btn">Secondary school</button>
+        <button class="btn group-btn education-btn">Self Taught</button>
+      </div>
     </section>
 
     <section class="skills">
@@ -133,7 +144,41 @@
     </section>
 
     <section class="form">
-      <form action="index.php" method="post"></form>
+      <h2>Form</h2>
+      <form action="index.php" method="post" enctype="application/x-www-form-urlencoded">
+
+        <div class="form-component">
+          <div class="names">
+            <div class="name">
+              <label for="fname">First Name</label>
+              <input type="text" name="fname" id="fname">
+            </div>
+
+            <div class="name">
+              <label for="lname">Last Name</label>
+              <input type="text" name="fname" id="fname">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-component">
+
+        </div>
+
+
+        <div class="form-component">
+          <label for="mail">E-mail</label>
+          <input type="email" name="email" id="email">
+        </div>
+
+        <div class="form-component">
+          <label for="textarea"></label>
+          <textarea name="textare" id="textarea" maxlength="200"></textarea>
+        </div>
+
+        <button class="btn submit-btn" type="submit">submit</button>
+
+      </form>
     </section>
   </div>
 
@@ -143,7 +188,7 @@
 
 
 
-
+  <script src="main.js"></script>
   <!-- 
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
     <a class="navbar-brand" href="#">Clarence Taylor</a>
@@ -162,7 +207,7 @@
           <a class="nav-link" href="#education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#knowledges">knowledges</a>
+          <a class="nav-link" href="#technologys">technologys</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#interests">Interests</a>
@@ -253,8 +298,8 @@
       </p>
     </section>
 
-    <section id="knowledges">
-      <h2>knowledges</h2>
+    <section id="technologys">
+      <h2>technologys</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat sapien ac facilisis efficitur. Integer faucibus
         eros congue arcu volutpat, et consequat lectus placerat. Donec pellentesque turpis sit amet elit rutrum tincidunt.
