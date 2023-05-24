@@ -24,15 +24,12 @@
   <div class="grid-container">
     <section class="about">
       <h2><i class="fa fa-question"></i>About</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur excepturi in ipsam, eligendi
-        voluptas minima similique vero tenetur, iusto illo libero numquam quisquam esse delectus enim blanditiis
-        perspiciatis at?
-        At cupiditate enim provident quasi aliquid perferendis explicabo aut hic fugiat iure, a ex voluptates harum
-        nisi, sit ducimus laudantium ut eveniet excepturi veniam ratione repellat quod aspernatur nobis. Nemo!</p>
+      <p id="aboutTextP">I am Matej, I come from Slovak town called Poprad (apx. 50 000 residents) . I’ve been living
+        here all my live and have been going to school here aswell.</p>
       <div class="btns about-buttons">
         <button class="btn group-btn about-btn active">Background</button>
         <button class="btn group-btn about-btn">School</button>
-        <button class="btn group-btn about-btn">Work</button>
+        <button class="btn group-btn about-btn">Goals</button>
       </div>
     </section>
 
@@ -145,25 +142,7 @@
 
     <section class="form">
       <h2>Form</h2>
-      <form action="index.php" method="post" enctype="application/x-www-form-urlencoded">
-
-        <div class="form-component">
-          <div class="names">
-            <div class="name">
-              <label for="fname">First Name</label>
-              <input type="text" name="fname" id="fname">
-            </div>
-
-            <div class="name">
-              <label for="lname">Last Name</label>
-              <input type="text" name="fname" id="fname">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-component">
-
-        </div>
+      <form id="form" method="POST" enctype="application/x-www-form-urlencoded">
 
 
         <div class="form-component">
@@ -172,11 +151,11 @@
         </div>
 
         <div class="form-component">
-          <label for="textarea"></label>
-          <textarea name="textare" id="textarea" maxlength="200"></textarea>
+          <label for="textarea">Message</label>
+          <textarea name="textarea" id="textarea" maxlength="500"></textarea>
         </div>
 
-        <button class="btn submit-btn" type="submit">submit</button>
+        <button id="submit" class="btn submit-btn" type="submit">submit</button>
 
       </form>
     </section>

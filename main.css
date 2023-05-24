@@ -10,6 +10,7 @@
   --clr-purple: #af7cdf;
 
   --clr-light: #e4e4e4;
+  --clr-lightest: #eeeeee;
   --clr-dark: #2c2c2c;
 
 
@@ -44,8 +45,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   height: 100vh;
+  margin: 0 2rem;
 }
 
 header>h1>img {
@@ -53,11 +54,6 @@ header>h1>img {
   position: relative;
   margin-left: 2rem;
   bottom: 23%;
-}
-
-
-.name {
-  margin-left: 2rem;
 }
 
 h1 {
@@ -69,7 +65,6 @@ h1 {
 
 h1>span {
   font-size: 5rem;
-  font-weight: 700;
 }
 
 .name>small {
@@ -87,11 +82,11 @@ h1>span {
     "education interests"
     "form form" / 1fr 1fr;
   gap: 2rem;
-  margin: 2rem;
+  margin: 4rem;
 }
 
 section {
-  background-color: #eeeeee;
+  background-color: var(--clr-lightest);
   box-shadow: var(--box-shadow);
   position: relative;
   display: flex;
@@ -154,7 +149,7 @@ section>i {
 
 
 .group-btn {
-  margin-right: 0.25rem;
+  margin: 0.25rem 0.25rem 0 0;
 
 }
 
@@ -277,8 +272,16 @@ section>i {
   transform: translateY(-5px);
 }
 
+.html:hover>h3,
+.css:hover>h3,
+.bootstrap:hover>h3,
+.js:hover>h3 {
+  color: var(--clr-dark);
+}
+
 .html {
   grid-area: html;
+  border: 2px solid var(--clr-orange);
 }
 
 .html>h3 {
@@ -289,17 +292,10 @@ section>i {
   background-color: rgba(255, 160, 122, 0.5);
 }
 
-.html:hover>h3,
-.css:hover>h3,
-.bootstrap:hover>h3,
-.js:hover>h3 {
-  color: var(--clr-dark);
-}
-
-
 
 .css {
   grid-area: css;
+  border: 2px solid var(--clr-primary);
 }
 
 .css>h3 {
@@ -313,6 +309,8 @@ section>i {
 
 .bootstrap {
   grid-area: bootstrap;
+  border: 2px solid var(--clr-purple);
+
 }
 
 .bootstrap>h3 {
@@ -326,6 +324,7 @@ section>i {
 
 .js {
   grid-area: js;
+  border: 2px solid var(--clr-yellow);
 }
 
 .js>h3 {
@@ -420,6 +419,8 @@ section>i {
   color: var();
 }
 
+/* FORM */
+
 .form {
   grid-area: form;
 }
@@ -434,20 +435,37 @@ section>i {
   margin-bottom: 1rem;
 }
 
-.names {
-  display: flex;
-  justify-content: space-between;
+textarea,
+input[type=email] {
+  border: 1px solid var(--clr-primary);
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--clr-lightest);
 }
 
-.name {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+textarea:focus,
+input[type=email]:focus {
+  outline: 2px solid var(--clr-primary);
 }
 
 textarea {
   resize: none;
+  height: 150px;
+  margin-bottom: 1.5rem;
+}
 
+label {
+  margin-bottom: 0.25rem;
+}
+
+.submit-btn {
+  background-color: var(--clr-primary);
+  color: var(--clr-lightest);
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 /* FOOTER */
@@ -458,8 +476,7 @@ footer {
   justify-content: center;
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .grid-container {
     grid-template:
       "about"
@@ -469,7 +486,55 @@ footer {
       "skills"
       "interests"
       "form" / 1fr;
+    margin: 0 2rem;
   }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h1>span {
+    font-size: 3rem;
+  }
+
+
+  header>h1>img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    margin: 0 0.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1>span {
+    font-size: 1.5rem;
+  }
+
+  header>h1>img {
+    width: 150px;
+    margin-left: 0.5rem;
+  }
+
+  .grid-container>section h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    margin: 0 1 rem;
+  }
+
+  /* CONTACT */
+
+  .contact-group i {
+    font-size: 2rem;
+  }
+
 
   .experiences {
     grid-template:
@@ -479,4 +544,39 @@ footer {
       "js" /1fr;
   }
 
+  .technology>img {
+    opacity: 0.7;
+  }
+
+  .html>h3,
+  .css>h3,
+  .bootstrap>h3,
+  .js>h3 {
+    color: var(--clr-dark);
+  }
+
+  .html {
+    background-color: rgba(255, 160, 122, 0.5);
+  }
+
+  .css {
+    background-color: rgba(122, 220, 255, 0.5);
+  }
+
+  .bootstrap {
+    background-color: rgba(228, 118, 255, 0.5);
+  }
+
+  .js {
+    background-color: rgba(255, 242, 98, 0.5);
+  }
+
+
+
+
+  /* FORM */
+
+  textarea {
+    height: 200px;
+  }
 }
