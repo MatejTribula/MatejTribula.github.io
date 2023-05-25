@@ -46,33 +46,54 @@ const aboutBtns = document.querySelectorAll('.about-btn')
 const aboutText = [
   'I am Matej, I come from Slovak town called Poprad (apx. 50 000 residents) . I’ve been living here all my live and have been going to school here aswell.',
 
-  'From age 6 to age 15 I visited elementary school on address Komenskeho in Poprad. There I’ve learnt the basic knowledge and after that I started going to Súkromná Stredná Odborná Škola, Ulica 29. Augusta 4812, 058 01 Poprad. In this secondary school I’ve been learning basics of various IT oriented subjects for the last 3 years. I learnt about networking, graphics design, web design, databases, programming and many more things. Thanks to this school I found out what I like to do most and what I would like to do in the future.',
+  'At age of 15 I decided to study IT at Súkromná Stredná Odborná Škola, Ulica 29. Augusta 4812, 058 01 Poprad (also called SSOSTA). At this secondary school I’ve been learning basics of various IT oriented subjects for the last 3 years. I learnt about networking, graphics design, web design, databases, programming and many more things. Thanks to this school I found out what I like to do most and what I would like to do in the future.',
 
   'For the last year I have been interested in web design and all the skills important for a developer. I got to become good in planning, writing HTML, simplifying syntax, making the documents esay to read and so on. Near the end of the last year I started learning javascript and that’s what I would love to get better at. '
 ]
 
-const aboutTextP = document.getElementById('aboutTextP')
+const aboutTextTarget = document.getElementById('aboutTextParagraph')
 
 
-aboutBtns.forEach((aboutBtn, index) => {
-  aboutBtn.addEventListener('click', () => {
-    aboutTextP.innerText = aboutText[index]
-    aboutBtns.forEach((aboutBtn) => {
-      aboutBtn.classList.remove('active')
-      aboutBtns[index].classList.add('active')
-    })
-  })
-})
+const educationButtons = document.querySelectorAll('.education-btn')
+console.log(educationButtons)
+const educationText = [
+  '<h3>Secondary School</h3><p>During my second year at SSOSTA I had an opportunity to learn basics of web development. I got start practising with HTML and CSS. After getting better at CSS I was able to work with Bootstrap. These skills were this year reinforced by learning scripting language php.</p>',
+
+  '<h3>Self taught</h3><p>After finishing some school projects, I became interested in learning HTML and CSS on my own. I used multiple resources to study from such as Udemy or YouTube. I tried to practice in simulated scenarios by Frontend Mentor where I got to learn what is common practice. Later I started to learn js which I still did not master and I am really keen to do so.</p>'
+]
+
+const educationTextTarget = document.querySelector('.education-group')
+console.log(educationText)
 
 
-function buttonFunc(btnCon) {
-  aboutBtns.forEach((btn, index) => {
-    aboutBtn.addEventListener('click', () => {
-      aboutTextP.innerText = aboutText[index]
-      aboutBtns.forEach((aboutBtn) => {
-        aboutBtn.classList.remove('active')
-        aboutBtns[index].classList.add('active')
+
+buttonFunction(aboutBtns, aboutTextTarget, aboutText)
+buttonFunction(educationButtons, educationTextTarget, educationText)
+
+
+function buttonFunction(clickBtns, clickTextDest, clickText) {
+  clickBtns.forEach((clickBtn, index) => {
+    clickBtn.addEventListener('click', () => {
+      // console.log(clickTextDest)
+      clickTextDest.innerHTML = clickText[index]
+      clickBtns.forEach((clickBtn) => {
+        clickBtn.classList.remove('active')
+        clickBtns[index].classList.add('active')
       })
     })
+
+
   })
 }
+
+
+
+// aboutBtns.forEach((aboutBtn, index) => {
+//   aboutBtn.addEventListener('click', () => {
+//     destination.innerHTML = aboutText[index]
+//     aboutBtns.forEach((aboutBtn) => {
+//       aboutBtn.classList.remove('active')
+//       aboutBtns[index].classList.add('active')
+//     })
+//   })
+// })

@@ -4,10 +4,11 @@
 
   --clr-primary: #008DD5;
   --clr-red: #EF3054;
-  --clr-yellow: #FEE440;
+  --clr-yellow: #dace2d;
   --clr-green: #5ace46;
   --clr-orange: #FA9F42;
   --clr-purple: #af7cdf;
+  --clr-pink: #df7cca;
 
   --clr-light: #e4e4e4;
   --clr-lightest: #eeeeee;
@@ -79,8 +80,7 @@ h1>span {
     "about contact"
     "experience experience"
     "education skills"
-    "education interests"
-    "form form" / 1fr 1fr;
+    "interests form" / 1fr 1fr;
   gap: 2rem;
   margin: 4rem;
 }
@@ -93,6 +93,10 @@ section {
   flex-direction: column;
 }
 
+section>h2 {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
 .grid-container>section {
   border-radius: 15px;
@@ -105,7 +109,7 @@ section {
 
 .grid-container>section h2 {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   /* position: absolute; */
 
 }
@@ -137,6 +141,11 @@ section>i {
   z-index: 1;
 }
 
+.btns {
+  position: absolute;
+  bottom: 2rem;
+}
+
 .btn {
   padding: 0.25rem 1rem;
   border: 1px solid #000;
@@ -159,7 +168,7 @@ section>i {
   grid-area: about;
 }
 
-.about h2 {
+.about>h2>i {
   color: var(--clr-red);
 }
 
@@ -185,7 +194,7 @@ section>i {
   grid-area: contact;
 }
 
-.contact h2 {
+.contact>h2>i {
   flex-grow: 0;
   color: var(--clr-yellow);
 }
@@ -208,6 +217,8 @@ section>i {
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
+  margin-bottom: 6rem;
+  flex-grow: 1;
 }
 
 .contact-group i {
@@ -218,13 +229,26 @@ section>i {
   font-size: 1.5rem;
 }
 
+.explanation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  border: 1px solid var(--clr-yellow);
+  color: var(--clr-yellow);
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+}
+
+
 /* EXPERIENCE */
 
 .experience {
   grid-area: experience;
 }
 
-.experience>h2 {
+.experience>h2>i {
   color: var(--clr-green);
 }
 
@@ -370,7 +394,7 @@ section>i {
   grid-area: education;
 }
 
-.education>h2 {
+.education>h2>i {
   color: var(--clr-purple);
 }
 
@@ -392,7 +416,7 @@ section>i {
 }
 
 .education-group {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .education-buttons {
@@ -405,8 +429,79 @@ section>i {
   grid-area: skills;
 }
 
-.skills>h2 {
+.skills>h2>i {
   color: var(--clr-orange);
+}
+
+.skills-container {
+  /* width: 100%; */
+  overflow: hidden;
+  display: grid;
+  grid-template:
+    "communicative determined"
+    "tolearn patient" /1fr 1fr;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.communicative {
+  grid-area: communicative;
+}
+
+.determined {
+  grid-area: determined;
+}
+
+.to-learn {
+  grid-area: tolearn;
+}
+
+.patient {
+  grid-template-columns: patient;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+}
+
+.skill>i {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 3.5rem;
+  color: var(--clr-orange);
+  margin-right: 2rem;
+}
+
+.skill h3 {
+  font-size: 1.375rem;
+}
+
+.skill .skill-line {
+  height: 10px;
+  width: 150px;
+  border: 2px solid var(--clr-orange);
+  border-radius: 15px;
+}
+
+.skill-line>.skill-line-fill {
+  background-color: var(--clr-orange);
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}
+
+.communicative .skill-line-fill {
+  width: 70%;
+}
+
+.determined .skill-line-fill {
+  width: 80%;
+}
+
+.patient .skill-line-fill {
+  width: 75%;
 }
 
 /* INTERESTS */
@@ -415,8 +510,64 @@ section>i {
   grid-area: interests;
 }
 
-.interests>h2 {
-  color: var();
+
+
+.interests>h2>i {
+  color: var(--clr-pink);
+}
+
+.interests-container {
+  display: grid;
+  align-content: center;
+  grid-template:
+    "hang clothes music"
+    "excercise cooking games"
+    /1fr 1fr 1fr;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+
+.hang-out {
+  grid-area: hang;
+}
+
+.clothes {
+  grid-area: clothes;
+}
+
+.music {
+  grid-area: music;
+}
+
+.excercise {
+  grid-area: excercise;
+}
+
+.cooking {
+  grid-area: cooking;
+}
+
+.games {
+  grid-area: games;
+}
+
+
+.interest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.interest>i {
+  font-size: 3.5rem;
+  color: var(--clr-pink);
+  margin-bottom: 0.5rem;
+}
+
+.interest>h3 {
+  font-size: 1.375rem;
 }
 
 /* FORM */
@@ -425,7 +576,7 @@ section>i {
   grid-area: form;
 }
 
-.form>h2 {
+.form>h2>i {
   color: var(--clr-primary);
 }
 
@@ -437,6 +588,7 @@ section>i {
 
 textarea,
 input[type=email] {
+  font-family: 'Roboto', sans-serif;
   border: 1px solid var(--clr-primary);
   padding: 0.5rem;
   border-radius: 5px;
@@ -474,6 +626,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -500,6 +653,33 @@ footer {
 
   header>h1>img {
     width: 240px;
+  }
+
+  /* SKILLS */
+
+  .skills-container {
+    grid-template:
+      "communicative"
+      "determined"
+      "tolearn"
+      "patient" /1fr;
+  }
+
+  /* INTERESTS */
+
+  .interests-container {
+    grid-template:
+      "hang clothes"
+      "music excercise"
+      "cooking games" /1fr 1fr;
+  }
+
+
+
+  /* FOOTER */
+
+  footer {
+    margin: 2rem 0 2rem 0
   }
 }
 
@@ -536,6 +716,8 @@ footer {
   }
 
 
+  /* EXPERIENCES */
+
   .experiences {
     grid-template:
       "html"
@@ -571,8 +753,17 @@ footer {
     background-color: rgba(255, 242, 98, 0.5);
   }
 
+  /* SKILLS */
+  .skill>i {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
 
-
+  /* INTERESTS */
+  .interest>i {
+    font-size: 2rem;
+  }
 
   /* FORM */
 
