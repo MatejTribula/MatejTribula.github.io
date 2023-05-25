@@ -1,3 +1,4 @@
+// FORM SUBMIT, VALIDITY etc.
 const form = document.getElementById('form')
 
 const email = document.getElementById('email')
@@ -5,15 +6,17 @@ const textrea = document.getElementById('textarea')
 
 const submitBtn = document.getElementById('submit')
 
+const botCheck = document.getElementById('botCheck')
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  var userResponse = grecaptcha.getResponse();
+  const expectedValue = 6
 
-  if (!userResponse) {
-    alert("Please complete the reCAPTCHA challenge.");
-    return;
+  if (botCheck.value !== expectedValue.toString()) {
+    alert('You have entered wrong answer!')
+    return
   }
 
   const EmailMessage = {
@@ -29,13 +32,16 @@ form.addEventListener('submit', (e) => {
     },
     body: JSON.stringify(EmailMessage)
   })
+
+
     .then(response => {
       if (response.ok) {
         email.value = ""
         textarea.value = ""
+        botCheck.value = ""
         return response.text()
       } else {
-        throw new Error('Chyba pri odosielaní požiadavky')
+        throw new Error('There was an error while sending a request')
       }
     })
     .then(responseText => {
@@ -57,12 +63,10 @@ const aboutText = [
 
   'For the last year I have been interested in web design and all the skills important for a developer. I got to become good in planning, writing HTML, simplifying syntax, making the documents esay to read and so on. Near the end of the last year I started learning javascript and that’s what I would love to get better at. '
 ]
-
 const aboutTextTarget = document.getElementById('aboutTextParagraph')
 
 
 const educationButtons = document.querySelectorAll('.education-btn')
-console.log(educationButtons)
 const educationText = [
   '<h3>Secondary School</h3><p>During my second year at SSOSTA I had an opportunity to learn basics of web development. I got start practising with HTML and CSS. After getting better at CSS I was able to work with Bootstrap. These skills were this year reinforced by learning scripting language php.</p>',
 
@@ -70,8 +74,6 @@ const educationText = [
 ]
 
 const educationTextTarget = document.querySelector('.education-group')
-console.log(educationText)
-
 
 
 buttonFunction(aboutBtns, aboutTextTarget, aboutText)
@@ -81,7 +83,6 @@ buttonFunction(educationButtons, educationTextTarget, educationText)
 function buttonFunction(clickBtns, clickTextDest, clickText) {
   clickBtns.forEach((clickBtn, index) => {
     clickBtn.addEventListener('click', () => {
-      // console.log(clickTextDest)
       clickTextDest.innerHTML = clickText[index]
       clickBtns.forEach((clickBtn) => {
         clickBtn.classList.remove('active')
@@ -93,14 +94,30 @@ function buttonFunction(clickBtns, clickTextDest, clickText) {
   })
 }
 
+// CLIPBOARD
+
+const contacts = document.querySelectorAll('.contact')
+const contactName = ['Email', 'Tel. No.', 'Twitter', 'TikTok']
+const contactValues = ['matej.tribula@gmail.com', '0902286495', '@mattveym', '@mattveym']
 
 
-// aboutBtns.forEach((aboutBtn, index) => {
-//   aboutBtn.addEventListener('click', () => {
-//     destination.innerHTML = aboutText[index]
-//     aboutBtns.forEach((aboutBtn) => {
-//       aboutBtn.classList.remove('active')
-//       aboutBtns[index].classList.add('active')
-//     })
-//   })
-// })
+clipboardFunction()
+
+
+
+function clipboardFunction() {
+  contacts.forEach((contact, index) => {
+    contact.addEventListener('click', () => {
+      var clipboard = document.createElement('textarea')
+      clipboard.classList.add('clipboard')
+      clipboard.value = contactValues[index]
+
+      document.body.appendChild(clipboard)
+      clipboard.select()
+      document.execCommand('copy')
+      document.body.removeChild(clipboard)
+
+      alert(`You have successfully copied my ${contactName[index]}!`)
+    })
+  })
+}

@@ -37,19 +37,19 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contacts">
       <h2><i class="fa-regular fa-at"></i> Contact</h2>
 
 
-      <div class="contact-group">
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-solid fa-mobile"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <div class="contacts-container">
+        <i class="contact fa-solid fa-envelope"></i>
+        <i class="contact fa-solid fa-mobile"></i>
+        <i class="contact fa-brands fa-twitter"></i>
+        <i class="contact fa-brands fa-tiktok"></i>
       </div>
 
       <div class="explanation">
-        <p>Click on the icon</p>
+        <p>Copy by clicking on the icon</p>
       </div>
     </section>
 
@@ -222,7 +222,10 @@
           <textarea name="textarea" id="textarea" maxlength="500"></textarea>
         </div>
 
-        <div class="g-recaptcha relement" data-sitekey="6LcokT0mAAAAAKBTG9X1_IHTXuJ8-w52mRDs8b4d"></div>
+        <div class="form-component">
+          <label for="bot-check">Number of interests I have shown on this website:</label>
+          <input type="number" id="botCheck" name="bot-check" required>
+        </div>
 
         <button id="submit" class="btn submit-btn" type="submit">submit</button>
 
@@ -237,6 +240,7 @@
 
 
   <script src="main.js"></script>
+
 </body>
 
 </html>
