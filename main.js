@@ -9,6 +9,13 @@ const submitBtn = document.getElementById('submit')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
+  var userResponse = grecaptcha.getResponse();
+
+  if (!userResponse) {
+    alert("Please complete the reCAPTCHA challenge.");
+    return;
+  }
+
   const EmailMessage = {
     systemEmail: "mr.sawch@gmail.com",
     contactEmail: email.value,
