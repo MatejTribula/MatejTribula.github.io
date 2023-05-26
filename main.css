@@ -143,6 +143,7 @@ section>i {
 .btn {
   font-family: inherit;
   padding: 0.25rem 1rem;
+  color: var(--clr-dark);
   border: 1px solid #000;
   border-radius: 5px;
   font-size: 14px;
