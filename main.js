@@ -1,9 +1,7 @@
-// FORM SUBMIT, VALIDITY etc.
+// FORM SUBMIT, VALIDITY, ANTI-SPAM etc.
 const form = document.getElementById('form')
-
 const email = document.getElementById('email')
 const textrea = document.getElementById('textarea')
-
 const submitBtn = document.getElementById('submit')
 
 const botCheck = document.getElementById('botCheck')
@@ -94,30 +92,14 @@ function buttonFunction(clickBtns, clickTextDest, clickText) {
   })
 }
 
-// CLIPBOARD
+// EMAIL SCROLL
 
-const contacts = document.querySelectorAll('.contact')
-const contactName = ['Email', 'Tel. No.', 'Twitter', 'TikTok']
-const contactValues = ['matej.tribula@gmail.com', '0902286495', '@mattveym', '@mattveym']
+const emailIcon = document.querySelector('.mail')
 
+emailIcon.addEventListener('click', () => {
+  email.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    email.focus()
+  }, 700)
 
-clipboardFunction()
-
-
-
-function clipboardFunction() {
-  contacts.forEach((contact, index) => {
-    contact.addEventListener('click', () => {
-      var clipboard = document.createElement('textarea')
-      clipboard.classList.add('clipboard')
-      clipboard.value = contactValues[index]
-
-      document.body.appendChild(clipboard)
-      clipboard.select()
-      document.execCommand('copy')
-      document.body.removeChild(clipboard)
-
-      alert(`You have successfully copied my ${contactName[index]}!`)
-    })
-  })
-}
+})

@@ -21,11 +21,6 @@
 
 }
 
-.clipboard {
-  position: 'fixed';
-  top: -9999px;
-  left: -9999px;
-}
 
 /* GENERAL */
 
@@ -33,6 +28,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooths;
 }
 
 img {
@@ -207,13 +206,16 @@ section>i {
 }
 
 
-.contacts-container>i {
+.contacts-container>a,
+.mail {
+  text-decoration: none;
   color: var(--clr-dark);
   transition: var(--transition);
   cursor: pointer
 }
 
-.contacts-container>i:hover {
+.contacts-container>a:hover,
+.mail:hover {
   color: var(--clr-yellow);
 }
 
@@ -607,7 +609,8 @@ input[type=number] {
 }
 
 textarea:focus,
-input[type=email]:focus {
+input[type=email]:focus,
+input[type=number]:focus {
   outline: 2px solid var(--clr-primary);
 }
 
