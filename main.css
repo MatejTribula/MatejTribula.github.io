@@ -135,10 +135,6 @@ section>i {
   z-index: 1;
 }
 
-.btns {
-  position: absolute;
-  bottom: 2rem;
-}
 
 .btn {
   font-family: inherit;
